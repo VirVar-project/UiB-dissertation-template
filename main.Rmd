@@ -19,7 +19,8 @@ bibliography: bibliography.bib
 knitr::opts_chunk$set(echo = FALSE)
 # install.packages("bookdown") # If bookdown package is missing
 # tinytex::install_tinytex() # If latex interpreter is missing
-Packages <- c("bookdown")
+if(!require(bookdown)) install.packages("bookdown")
+Packages <- c("bookdown") # Add your R packages here
 lapply(Packages, library, character.only = TRUE)
 ```
 
